@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    android:background="@drawable/round"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:layout_marginLeft="5dp"
+        android:padding="5dp"
+        android:fontFamily="@font/roboto"
+        android:text="Tell us a reason of reporting this post..."
+        android:textColor="#000"
+        >
+
+    </TextView>
+    <RelativeLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+<RadioGroup
+
+
+    android:orientation="vertical"
+    android:id="@+id/radioGroups"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RadioButton
+
+        android:layout_margin="5dp"
+        android:id="@+id/radioButtonOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sexual post"
+        android:fontFamily="@font/roboto"
+        android:buttonTint="@color/bg"/>
+    <RadioButton
+
+        android:layout_margin="5dp"
+        android:id="@+id/radioButtonTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Communal violance"
+        android:fontFamily="@font/roboto"/>
+
+    <RadioButton
+        android:layout_margin="5dp"
+        android:id="@+id/radioButtonFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="Others" >
+
+    </RadioButton>
+</RadioGroup>
+    <EditText
+        android:layout_below="@id/radioGroups"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:id="@+id/reportOwn"
+        android:layout_margin="5dp"
+        android:textSize="15dp"
+        android:fontFamily="@font/roboto"
+        android:hint="Specify the reason"
+        android:layout_width="match_parent"
+        android:background="@drawable/round_bac"
+        android:layout_marginBottom="3dp"
+        android:layout_height="wrap_content">
+
+    </EditText>
+
+
+        <TextView
+            android:layout_below="@id/reportOwn"
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="cancel"
+            android:textColor="@color/bg"
+            android:textSize="15dp">
+
+        </TextView>
+        <TextView
+
+            android:layout_below="@id/reportOwn"
+            android:id="@+id/reportButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="Report"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/bg"
+            android:textSize="15dp">
+
+        </TextView>
+    </RelativeLayout>
+
+</LinearLayout>

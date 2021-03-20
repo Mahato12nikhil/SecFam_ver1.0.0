@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/PlayerContentView"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="5dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="right|top"
+            android:src="@drawable/live"
+            android:visibility="visible">
+
+        </ImageView>
+
+
+        <com.bambuser.broadcaster.SurfaceViewWithAutoAR
+            android:id="@+id/VideoSurfaceView"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp">
+
+            <TextView
+                android:id="@+id/PlayerStatusTextView"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="20sp"
+                android:textColor="@color/bg"/>
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/showProg"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:id="@+id/currentTime"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="5dp"
+                    android:text="50:58"
+                    android:layout_marginTop="8dp">
+                </TextView>
+
+                <SeekBar
+                    android:visibility="gone"
+                    android:id="@+id/seekBar2x"
+                    android:layout_height="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:progress="0"
+                    android:layout_weight="1"
+                    android:max="200"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:secondaryProgressTint="@color/white"
+                    android:progressBackgroundTint="@color/white"
+                    android:progressTint="@color/bg"
+                    android:thumbTint="@color/bg"
+                    android:secondaryProgress="56"/>
+
+                <TextView
+                    android:id="@+id/totalTime"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="50:58"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="8dp"> </TextView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+
+
+
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/pause"
+                android:background="@drawable/ripple"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/exo_play"
+                android:tag="paused"
+                android:layout_centerInParent="true"
+                android:alpha="0.7"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp">
+
+            </ImageView>
+
+
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+</com.google.android.material.card.MaterialCardView>

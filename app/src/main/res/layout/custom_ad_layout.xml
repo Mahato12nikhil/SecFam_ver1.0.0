@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <com.facebook.ads.AdIconView
+        android:id="@+id/native_ad_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/below_ad_icon_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="55dp" />
+
+    <TextView
+        android:id="@+id/native_advertiser_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/roboto"
+        android:textSize="15sp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/native_ad_icon"
+        app:layout_constraintBottom_toTopOf="@+id/separate_advertiser_name_guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/separate_advertiser_name_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="27.5dp" />
+
+    <TextView
+        android:id="@+id/native_ad_sponsored_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        android:fontFamily="@font/roboto"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp"
+        android:text="sponsored"
+        app:layout_constraintStart_toStartOf="@+id/native_advertiser_name"
+        app:layout_constraintTop_toBottomOf="@+id/separate_advertiser_name_guideline" />
+
+    <LinearLayout
+        android:id="@+id/ad_choices_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.facebook.ads.MediaView
+        android:id="@+id/native_ad_media"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/ad_choices_container"
+        app:layout_constraintStart_toStartOf="@+id/native_ad_icon"
+        app:layout_constraintTop_toTopOf="@+id/below_ad_icon_guideline" />
+
+    <TextView
+        android:id="@+id/native_ad_social_context"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="3dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:fontFamily="@font/roboto"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp"
+        android:text="context"
+        app:layout_constraintStart_toStartOf="@+id/native_ad_media"
+        app:layout_constraintTop_toBottomOf="@+id/native_ad_media" />
+
+    <TextView
+        android:id="@+id/native_ad_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/native_ad_social_context"
+        app:layout_constraintTop_toBottomOf="@+id/native_ad_social_context" />
+
+    <Button
+        android:id="@+id/native_ad_call_to_action"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_bg"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@id/native_ad_media"
+        app:layout_constraintTop_toBottomOf="@+id/native_ad_media" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

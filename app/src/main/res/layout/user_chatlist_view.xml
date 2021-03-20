@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout android:orientation="horizontal"
+    android:background="#fff"
+    android:padding="8dp"
+    android:layout_height="wrap_content"
+
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".MainActivity"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chattt"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:src="@drawable/zarine"
+
+        android:id="@+id/user_single_image"/>
+
+
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:id="@+id/id"
+        android:layout_toRightOf="@+id/user_single_image"
+        android:layout_centerVertical="true">
+
+        <TextView
+
+            android:id="@+id/user_single_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/roboto"
+            android:text="Zarine Khan"
+            android:textColor="@color/theme"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/user_single_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+
+            android:layout_marginTop="5dp"
+            android:textColor="@color/bg_light"
+            android:fontFamily="@font/roboto"
+            android:text="Active now"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/statuslayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:id="@+id/status"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/onlinecircle"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="15sp"
+            android:layout_below="@+id/status"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/bg_light"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/roboto_light"
+            android:gravity="center_horizontal"
+            android:text="12:51pm"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    app:cardCornerRadius="10dp"
+    android:background="@color/white"
+    android:layout_marginTop="9dp"
+
+    >
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/frame_1"
+                android:layout_below="@id/image_profileTextJKSS"
+                android:orientation="vertical"
+                android:layout_marginTop="2dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/postTextxxJK"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="6dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="6dp"
+                        android:textColor="#000"
+                        android:textColorHighlight="@color/black"
+                        android:textColorLink="#629AF7"
+                        android:textSize="18dp"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dots_holder"
+                        android:orientation="horizontal"
+                        android:layout_gravity="bottom"
+                        android:gravity="center|bottom"
+                        >
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+
+            <View
+
+                android:layout_width="match_parent"
+                android:background="#E4E2E2"
+                android:id="@+id/view_1"
+
+                android:layout_below="@id/frame_1"
+                android:layout_height="1dp"
+                android:layout_margin="0dp">
+
+            </View>
+            <View
+
+                android:layout_width="match_parent"
+                android:background="#E4E2E2"
+                android:id="@+id/view_2"
+                android:layout_below="@id/image_profileTextJKSS"
+                android:layout_height="0dp">
+
+            </View>
+
+
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_profileTextJKSS"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="#ffff"
+                android:src="@drawable/sample"
+                android:layout_margin="6dp"
+
+                />
+
+
+
+            <TextView
+
+                android:fontFamily="@font/roboto"
+                android:id="@+id/usernameTextSS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/image_profileTextJKSS"
+                android:text="Nikhil Mahato"
+                android:textColor="#000"
+                android:background="@drawable/ripple_2"
+                android:clickable="true"
+                android:focusable="true"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/timeSS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/usernameTextSS"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/image_profileTextJKSS"
+
+                android:fontFamily="@font/roboto"
+                android:text="4 hrs ago" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/view_1"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/text_like_click"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:id="@+id/LikeTextSS"
+                            android:src="@drawable/heart"
+                            android:layout_marginTop="2dp"
+
+                            >
+
+                        </ImageView>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/youchkdtxt"
+
+                                android:visibility="gone"
+                                android:textColor="@color/black"
+                                android:layout_marginTop="2dp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+
+                                android:text="you and "
+                                android:layout_gravity="center"
+                                android:textSize="10dp"
+                                android:alpha="0.7"/>
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/like_countXTJKSS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="2dp"
+                            android:textSize="10dp"
+                            android:alpha="0.7"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/comment_holderJK"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/commentTextJKSS"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/comment"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/comment_countJKSS"
+                            android:textSize="10dp"
+                            android:layout_marginTop="2dp"
+                            android:alpha="0.7"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+
+
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/view_count"
+                            android:textSize="10dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center"
+                            android:alpha="0.5"
+                            android:textColor="#000"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            <ImageView
+                android:clickable="true"
+                android:id="@+id/moreOnlyText"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/more"
+                android:background="@drawable/ripple"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:alpha="0.8"/>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+</com.google.android.material.card.MaterialCardView>

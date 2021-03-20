@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_marginLeft="4dp"
+    android:id="@+id/belowET"
+    android:layout_alignParentBottom="true"
+    android:layout_marginRight="4dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_width="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:paddingRight="10dp"
+        android:background="@drawable/bottombg"
+        android:paddingLeft="10dp"
+        android:layout_toLeftOf="@id/chat_send_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="10">
+
+
+
+        <EditText
+            android:scrollbars="vertical"
+            android:id="@+id/chat_message_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:background="@color/whitecolor"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:maxHeight="100dp"
+            android:textColor="@color/theme"
+            android:textColorHint="@color/theme"
+            android:paddingStart="12dp"
+            android:hint="Enter Message..."
+            android:layout_centerVertical="true"
+            android:textCursorDrawable="@null" />
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/chat_send_btn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="4dp"
+        android:clickable="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        app:fabCustomSize="30dp"
+        android:src="@drawable/send"
+        android:contentDescription="TODO" >
+    </ImageView>
+</RelativeLayout>

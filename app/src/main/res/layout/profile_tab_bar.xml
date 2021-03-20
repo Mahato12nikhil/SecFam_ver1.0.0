@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+
+    <ImageView
+        android:id="@+id/profile_post_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/keyboard_arrow_left_24"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_gravity="center">
+
+    </ImageView>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+       android:layout_gravity="center">
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/media_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+
+
+
+            <!--     <ImageView
+                     android:layout_width="25dp"
+                     android:layout_height="25dp"
+                     android:src="@drawable/ic_keyboard_arrow_left_black_24dp">
+
+                 </ImageView>-->
+
+            <TextView
+                android:id="@+id/media"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/roboto"
+                android:text="Media"
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:textStyle="normal"
+                android:gravity="center"
+                >
+
+            </TextView>
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/posts_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/posts"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Posts"
+                android:textColor="#AEA9A9"
+                android:fontFamily="@font/roboto"
+                android:textSize="20dp"
+                android:textStyle="normal"
+                android:gravity="center"
+                >
+            </TextView>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>

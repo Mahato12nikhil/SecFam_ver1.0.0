@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/backg"
+        android:scaleType="centerCrop"
+        android:alpha="0.4">
+
+    </ImageView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/details_name"
+        android:background="@color/bg">
+        <RelativeLayout
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+        <ImageView
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/keyboard_arrow_left_24"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+           />
+        </RelativeLayout>
+<RelativeLayout
+    android:id="@+id/edit_done"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_centerInParent="true"
+    android:layout_marginEnd="5dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+
+        <TextView
+            android:id="@+id/done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto"
+            android:layout_centerInParent="true"
+
+
+            />
+</RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/details_name">
+        <TextView
+            android:id="@+id/personal_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Personal Details :"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/album_dp_10"
+            android:fontFamily="@font/roboto"
+            android:layout_marginTop="5dp">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/nameProfile_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:background="@drawable/edit_profile_edit_txt_back"
+            android:hint="Name"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto"
+            android:textCursorDrawable="@drawable/cursor_drawable"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <EditText
+            android:id="@+id/bio_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:background="@drawable/edit_profile_edit_txt_back"
+            android:hint="Bio"
+            android:textCursorDrawable="@drawable/cursor_drawable"
+            android:padding="10dp"
+           android:textColor="@color/black"
+            android:fontFamily="@font/roboto"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <EditText
+            android:id="@+id/details_edit"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:gravity="start"
+            android:background="@drawable/edit_profile_edit_txt_back"
+            android:hint="Write something about you"
+            android:padding="10dp"
+            android:textCursorDrawable="@drawable/cursor_drawable"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <EditText
+            android:id="@+id/location_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:background="@drawable/edit_profile_edit_txt_back"
+            android:hint="Add your city"
+            android:textCursorDrawable="@drawable/cursor_drawable"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+
+        <RadioGroup
+            android:id="@+id/sex_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Male"
+                android:fontFamily="@font/roboto"
+                android:textSize="15dp"
+                android:buttonTint="@color/bg">
+            </RadioButton>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Female"
+                android:buttonTint="@color/bg"
+                android:fontFamily="@font/roboto"
+                android:textSize="15dp">
+            </RadioButton>
+        </RadioGroup>
+
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

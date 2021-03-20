@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Post.CommentsActivity">
+
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/bg"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/finshL"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true">
+            <ImageView
+
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_baseline_keyboard_arrow_left_24"
+                >
+            </ImageView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler_view"
+        android:layout_above="@id/bottom"
+        android:layout_below="@id/toolbar"/>
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:id="@+id/bottom"
+        android:layout_alignParentBottom="true"
+        android:padding="4dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:id="@+id/image_profile"/>
+
+        <EditText
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/comment_bg"
+            android:id="@+id/add_comment"
+            android:layout_toLeftOf="@id/post"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:hint="Add a comment..."
+            android:textSize="14dp"
+            android:layout_toRightOf="@id/image_profile"/>
+
+        <ImageView
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:id="@+id/post"
+            android:src="@drawable/ic_baseline_send_24"
+            android:layout_marginEnd="5dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:text="POST"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,118 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+
+    compileSdkVersion 29
+
+    defaultConfig {
+        applicationId "com.project.nikhil.secfamfinal"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    /*configurations {
+        compile.exclude group: 'androidx.annotation', module: 'annotation'
+    }*/
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation project(path: ':libbambuser-module')
+    implementation 'com.google.firebase:firebase-database:19.2.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-storage:19.2.0'
+    implementation 'com.google.firebase:firebase-messaging:21.0.0'
+
+    def multidex_version = "2.0.1"
+    implementation "androidx.multidex:multidex:$multidex_version"
+
+
+    implementation 'com.google.firebase:firebase-firestore:21.4.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
+     implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'com.google.android.gms:play-services-identity:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:17.5.0'
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+
+    // Declare the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'androidx.browser:browser:1.2.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.facebook.shimmer:shimmer:0.1.0'
+
+
+    //facebook audience network
+    implementation 'com.facebook.android:audience-network-sdk:5.10.1'
+    
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'com.github.jd-alexander:library:1.1.0'
+    //implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+
+    //BetterLinkMovement
+    implementation 'me.saket:better-link-movement-method:2.2.0'
+
+    //algolia
+    implementation 'com.algolia:algoliasearch-android:3.27.0'
+
+    //exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer:2.12.1'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.12.1'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.12.1'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.12.1'
+    implementation 'com.google.android.exoplayer:exoplayer:2.12.3'
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+    //gms location
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
+
+    //firebase geo-fire
+    implementation 'com.firebase:geofire-android:2.1.1'
+
+    //fresco library
+    implementation 'com.facebook.fresco:fresco:2.3.0'
+
+    //jsoup library
+    implementation 'org.jsoup:jsoup:1.13.1'
+
+    //profile_image cropper
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+}
+apply plugin: 'com.google.gms.google-services'

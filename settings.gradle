@@ -1,0 +1,3 @@
+include ':libbambuser-module'
+include ':app'
+rootProject.name = "SecFam Final"

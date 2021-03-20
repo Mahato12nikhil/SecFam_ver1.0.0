@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#80000000"
+    android:orientation="vertical"
+    tools:targetApi="28">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/rewind"
+            android:id="@+id/exo_rew"
+            android:background="@drawable/ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:alpha="1">
+
+        </ImageView>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/play"
+            android:background="@drawable/ripple"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/exo_play"
+            android:layout_centerInParent="true"
+            android:alpha="0.7"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp">
+
+        </ImageView>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/pause"
+            android:layout_gravity="center"
+            android:id="@+id/exo_pause"
+            android:alpha="1"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp">
+
+        </ImageView>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/forward"
+            android:id="@+id/exo_ffwd"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:alpha="1"
+            android:background="@drawable/ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp">
+
+        </ImageView>
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@id/exo_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="2dp"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            />
+
+        <com.google.android.exoplayer2.ui.DefaultTimeBar
+            android:id="@id/exo_progress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            app:played_color="#82b1ff"
+            app:buffered_color="#cdcec8"
+            app:unplayed_color="#cdcec8" />
+
+        <TextView
+            android:id="@id/exo_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingRight="2dp"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:id="@+id/layout_RT"
+    android:orientation="vertical"
+    android:layout_marginBottom="5dp"
+    android:layout_width="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/Message1"
+        android:background="@drawable/background"
+        android:padding="6dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/chat_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="3dp"
+            android:maxWidth="200dp"
+            android:fontFamily="@font/roboto"
+            android:text="Hello friends"
+            android:textColor="@color/theme"
+            android:textSize="16dp"/>
+
+        <TextView
+
+            android:id="@+id/Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/chat_text"
+            android:text="10:45pm"
+            android:layout_alignParentBottom="true"
+            android:textSize="8dp"
+            android:layout_marginLeft="3dp"
+            android:fontFamily="@font/roboto_light"
+            android:layout_toRightOf="@+id/chat_text"
+            android:textColor="#727272"
+            />
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:visibility="gone"
+            android:src="@drawable/sent_tick"
+            android:id="@+id/seen"
+            android:layout_alignBaseline="@id/chat_text"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/Time"
+
+
+            android:layout_marginLeft="5dp"
+            android:textColor="#fff"></ImageView>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

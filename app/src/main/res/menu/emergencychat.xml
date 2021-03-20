@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/clearusers"
+        android:title="clear users" />
+    <item
+        android:id="@+id/clearpolice"
+        android:title="clear police" />
+    <item
+        android:id="@+id/main_logout_btn"
+        android:title="logout" />
+</menu>

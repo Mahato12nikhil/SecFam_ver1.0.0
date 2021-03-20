@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/XXXHUB"
+    android:layout_width="match_parent"
+    android:padding="4dp"
+    android:layout_marginBottom="6dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/emrg_frag_bg"
+    android:orientation="vertical">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/dpDal"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/sample"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/victimDal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:layout_marginStart="2dp"
+        android:fontFamily="@font/roboto"
+        android:padding="2dp"
+        android:text="Nikhil Mahato"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/dpDal"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:fontFamily="@font/roboto"
+        android:text="is looking for your help."
+        android:textColor="#000"
+        android:layout_marginStart="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/timeDal"
+        app:layout_constraintStart_toEndOf="@+id/victimDal"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/timeDal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:alpha="0.8"
+        android:fontFamily="@font/roboto"
+        android:padding="2dp"
+        android:text="25th Jan, Wed,5:30 a.m"
+        android:textColor="#000"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/dpDal"
+        app:layout_constraintTop_toBottomOf="@+id/victimDal">
+
+    </TextView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

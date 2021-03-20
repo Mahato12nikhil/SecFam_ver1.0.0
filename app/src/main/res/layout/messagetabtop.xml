@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:id="@+id/rhj"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="8dp"
+    android:paddingBottom="4dp"
+    android:paddingTop="4dp"
+    android:paddingLeft="8dp"
+    android:elevation="5dp"
+    android:background="@color/theme"
+    android:layout_centerHorizontal="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/icon_bck"
+        android:layout_centerVertical="true"
+        android:src="@drawable/back_white">
+
+    </ImageView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/circle_img"
+        android:layout_marginLeft="8dp"
+        android:src="@drawable/zarine"
+        android:layout_toRightOf="@id/icon_bck">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/circle_img"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:text="Tapas Mondal"
+            android:textColor="@color/whitecolor"
+            android:fontFamily="@font/roboto"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Typing..."
+            android:id="@+id/online"
+            android:visibility="gone"
+            android:layout_below="@id/name"
+            android:textColor="@color/whitecolor"
+            android:fontFamily="@font/roboto_light"
+            android:textSize="0dp">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Typing..."
+            android:id="@+id/type"
+            android:visibility="gone"
+            android:layout_below="@id/name"
+            android:textColor="@color/whitecolor"
+            android:fontFamily="@font/roboto_light"
+            android:textSize="0dp">
+
+        </TextView>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/more_white"
+        android:id="@+id/more"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true">
+
+    </ImageView>
+</RelativeLayout>
+
+

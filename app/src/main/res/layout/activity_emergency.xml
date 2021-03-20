@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Emergency.EmergencyActivity"
+    android:background="@drawable/emergency_bg_color"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chat"
+        >
+
+        <RelativeLayout
+            android:id="@+id/emerg_back"
+            android:layout_width="@dimen/album_dp_50"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_baseline_keyboard_arrow_left_24">
+
+        </ImageView>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/h1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="Home"
+            android:textColor="#ffff"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <include
+        android:id="@+id/fdgd"
+        android:layout_below="@id/chat"
+        layout="@layout/emergency_tabbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+    
+    <TableLayout
+        android:layout_below="@id/fdgd"
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </TableLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/emergencymain_tabPager"
+        android:layout_below="@id/fdgd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"/>
+</RelativeLayout>
