@@ -18,7 +18,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/conv_list"
+        android:id="@+id/chat_list"
         android:background="#fff"
         android:layout_marginTop="5dp"
         android:layout_below="@id/appBarLayout"

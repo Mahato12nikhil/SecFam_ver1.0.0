@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.project.nikhil.secfamfinal">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.project.nikhil.secfamfinal1">
 
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -14,7 +19,12 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
 
     <uses-feature
         android:name="android.hardware.camera.any"
@@ -33,28 +43,37 @@
         android:required="false" />
 
     <application
-        android:hardwareAccelerated="true"
+        android:name=".MyApplication"
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:networkSecurityConfig="@xml/network_security_config"
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MaterialComponents.Light.NoActionBar.Bridge"
+        android:theme="@style/myAppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Facebook.Facebook_Test_Ad">
+        <activity android:name=".postView.PostViewImage"></activity>
+        <activity android:name=".postView.PostViewLink" />
+        <activity android:name=".postView.PostViewVideo" />
+        <activity android:name=".postView.PostViewText" />
 
-        </activity>
+        <service
+            android:name=".Map.VictimLocationUpdateService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".Post.LinkOpenerActivity" />
+        <activity
+            android:name=".Post.ExoPlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name=".Facebook.Facebook_Test_Ad" />
 
         <meta-data
             android:name="com.google.android.actions"
             android:resource="@xml/network_security_config" />
 
-        <activity android:name=".SplashScreenActivity">
-
-        </activity>
-
+        <activity android:name=".SplashScreenActivity" />
         <activity android:name=".Chat.ConversationActivity" />
         <activity android:name=".Chat.ChatHomeActivity" />
         <activity android:name=".Profile.FollowingActivity" />
@@ -85,7 +104,8 @@
             </intent-filter>
         </service>
         <service android:name=".Location.Mylocationshare" />
-        <service android:name=".LocationService.TrackingService" />
+        <service android:name=".LocationService.TrackingService"
+            android:foregroundServiceType="location"/>
 
         <activity
             android:name=".Post.PostActivity"
@@ -104,7 +124,18 @@
             android:resource="@array/preloaded_fonts" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBIL2KJQrPXoNicA1rhQ4GKVlxk3wkIMeo" />
+            android:value="@string/google_map_api_key" />
+
+        <provider
+            android:name=".utils.MyFileProvider"
+            android:authorities="@string/authority"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

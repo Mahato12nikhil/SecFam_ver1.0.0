@@ -60,7 +60,7 @@
                 android:id="@+id/frame_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/details_pic"
+                android:layout_below="@id/description"
                 android:orientation="vertical">
 
 
@@ -72,15 +72,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp">
                     <com.google.android.exoplayer2.ui.PlayerView
-                        android:id="@+id/video_viewXLX"
+                        android:id="@+id/video_view"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="200dp"
                         app:controller_layout_id="@layout/custom_controller"
                         app:resize_mode="fixed_width"
                         app:hide_on_touch="true"
-
-
-                        app:shutter_background_color="#5A5555"
+                        app:shutter_background_color="@color/black"
                         app:show_timeout="5000"
                         app:rewind_increment="10000"
                         app:fastforward_increment="10000"
@@ -88,26 +86,23 @@
                         android:background="#000"
                         app:surface_type="surface_view"
                         app:auto_show="true"
-                        app:repeat_toggle_modes="none"
-                         />
+                        app:repeat_toggle_modes="none"/>
 
 
                     <ImageView
-
                         android:id="@+id/emni"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                       >
-
+                        android:layout_height="wrap_content">
                     </ImageView>
 
                     <ProgressBar
-                        android:id="@+id/likeGYNO"
+                        android:id="@+id/progressBar"
                         android:indeterminateDrawable="@drawable/custom_progressbar"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_gravity="center"
-                        >
+                        android:theme="@style/myPlayerTheme"
+                        android:visibility="visible">
 
                     </ProgressBar>
 
@@ -129,7 +124,7 @@
 
 
             <TextView
-                android:id="@+id/details_pic"
+                android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/image_profile"

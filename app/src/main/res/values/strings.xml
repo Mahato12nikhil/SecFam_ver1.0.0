@@ -1,6 +1,38 @@
 <resources>
     <string name="app_name">SecFam Final</string>
+    <!--<string name="native_placement_id">IMG_16_9_APP_INSTALL#YOUR_PLACEMENT_ID</string>-->
+    <string name="native_placement_id">IMG_16_9_APP_INSTALL#YOUR_PLACEMENT_ID</string>
+    <!-- <string name="native_placement_id">Wrong</string>-->
+    <string name="google_map_api_key">AIzaSyAei-0przVDN0uwzHuW8fF5XAyZAHeceTE</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tracking_enabled_notif">Tracking enabled</string>
+    <string name="no_location_is_set">No location is set</string>
+    <string name="typing">Typing…</string>
+    <string name="regenerate_otp">Regenerate OTP</string>
+    <string name="change_phone_no">Change Phone No</string>
+    <string name="please_wait">Please Wait…</string>
+    <string name="no_connection">No Connection!</string>
+    <string name="no_internet_message">Please check your Internet connection.</string>
+    <string name="retry">Retry</string>
+    <string name="new_post">New Post</string>
+    <string name="comments">Comments</string>
+    <string name="no_comment_found">No comment found</string>
+    <string name="images">Images</string>
+    <string name="video_player">Video Player</string>
+    <string name="icon_desc">Media Icon</string>
+    <string name="image_desc">Media Image</string>
+    <string name="location_permission_denied">Permission Denied</string>
+    <string name="write_a_caption">Write a caption</string>
+    <string name="authority">com.project.nikhil.secfamfinal1.fileprovider</string>
+    <string name="delete">Delete</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="register">Register</string>
+    <string name="change_details">Change Details</string>
+    <string name="cancel">Cancel</string>
+    <string name="report">Report</string>
+    <string name="notification_has_been_send_to">Notification has been send to</string>
+    <string name="don_t_have_a_account">Don\'t have an account?</string>
+    <string name="post_not_exist_msg">Post is no longer exist. Deleted by the owner of the post</string>
 </resources>

@@ -2,21 +2,43 @@
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="wrap_content"
-    android:layout_marginStart="8dp"
     android:id="@+id/layout_RT"
     android:orientation="vertical"
-    android:layout_marginBottom="5dp"
-    android:layout_width="wrap_content">
+    android:layout_width="match_parent">
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_day"
+        android:padding="8dp"
+        android:background="@drawable/chat_day_bg"
+        android:text="TODAY"
+        android:textSize="12sp"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/checkedItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/album_dp_2"
+        android:paddingTop="@dimen/album_dp_2">
+        <LinearLayout
+            android:id="@+id/ll_ripple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background">
+
 
     <RelativeLayout
         android:id="@+id/Message1"
-        android:background="@drawable/background"
         android:padding="6dp"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        >
+        android:background="?attr/selectableItemBackground">
 
         <TextView
             android:id="@+id/chat_text"
@@ -38,28 +60,27 @@
             android:layout_alignBaseline="@id/chat_text"
             android:text="10:45pm"
             android:layout_alignParentBottom="true"
-            android:textSize="8dp"
+            android:textSize="10sp"
             android:layout_marginLeft="3dp"
-            android:fontFamily="@font/roboto_light"
+            android:fontFamily="@font/roboto"
             android:layout_toRightOf="@+id/chat_text"
             android:textColor="#727272"
-            />
+            tools:ignore="SmallSp" />
         <ImageView
-            android:layout_width="10dp"
-            android:layout_height="10dp"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
             android:visibility="gone"
             android:src="@drawable/sent_tick"
             android:id="@+id/seen"
             android:layout_alignBaseline="@id/chat_text"
             android:layout_alignParentBottom="true"
             android:layout_toRightOf="@+id/Time"
-
-
             android:layout_marginLeft="5dp"
-            android:textColor="#fff"></ImageView>
+            android:textColor="#fff"/>
 
 
 
     </RelativeLayout>
-
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

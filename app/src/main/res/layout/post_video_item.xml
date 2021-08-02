@@ -38,7 +38,7 @@
                         android:id="@+id/postVideoView"
                         android:layout_width="match_parent"
                         android:layout_height="250dp"
-                        android:src="@drawable/sample"
+                        android:src="@drawable/ic_videocam"
                         android:alpha="0.8"
 
                         />
@@ -79,7 +79,7 @@
                 android:padding="4dp"
                 android:textColor="@color/black"
                 android:layout_marginLeft="4dp"
-                android:text="Description of pic/video"
+                android:text=".........."
                 android:textSize="16dp">
 
             </TextView>
@@ -89,7 +89,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_margin="6dp"
-                android:src="@drawable/sample"
+                android:src="@drawable/man_placeholder"
                 app:civ_border_color="#ffff"
                 app:civ_border_width="1dp" />
 
@@ -101,7 +101,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_toRightOf="@id/image_profile_video"
                 android:fontFamily="@font/roboto"
-                android:text="Nikhil Mahato"
+                android:text="........"
                 android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/ripple_2"
@@ -116,7 +116,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/image_profile_video"
                 android:fontFamily="@font/roboto"
-                android:text="4 hrs ago" />
+                android:text="......" />
 
 
             <LinearLayout
@@ -145,36 +145,28 @@
                         android:id="@+id/video_like_click"
                         android:background="?android:attr/selectableItemBackground"
                         android:clickable="true"
-                        android:focusable="true"
-                        >
+                        android:focusable="true">
 
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_marginTop="2dp"
-                            android:id="@+id/LikeVideo"
-                            android:src="@drawable/heart"
-                            >
-
-                        </ImageView>
+                        <FrameLayout
+                            android:layout_width="@dimen/album_dp_20"
+                            android:layout_height="@dimen/album_dp_20"
+                            android:layout_marginTop="2dp">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:id="@+id/LikeVideo"
+                                android:src="@drawable/heart" />
+                            <ProgressBar
+                                android:id="@+id/like_progress"
+                                android:layout_width="@dimen/album_dp_20"
+                                android:layout_height="@dimen/album_dp_20"
+                                android:visibility="gone"/>
+                        </FrameLayout>
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <TextView
-                                android:id="@+id/youchkdVd"
-
-                                android:visibility="gone"
-                                android:textColor="@color/black"
-                                android:layout_marginTop="2dp"
-                                android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
-
-                                android:text="you and "
-                                android:layout_gravity="center"
-                                android:textSize="10dp"
-                                android:alpha="0.7"/>
                         <TextView
                             android:textColor="@color/black"
                             android:id="@+id/like_countVideo"
@@ -186,10 +178,8 @@
                             android:textSize="10dp" />
                         </LinearLayout>
                     </LinearLayout>
-
-
                     <LinearLayout
-                        android:id="@+id/comment_holder"
+                        android:id="@+id/video_download"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -200,7 +190,36 @@
                         android:focusable="true">
 
                         <ImageView
-                            android:id="@+id/commentVideo"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/download"
+                            />
+
+                        <TextView
+                            android:id="@+id/download_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="2dp"
+                            android:alpha="0.7"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/video_comment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_marginTop="2dp"
@@ -224,36 +243,7 @@
 
 
 
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:id="@+id/down_holder"
-                        android:background="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:focusable="true">
 
-                        <ImageButton
-                            android:id="@+id/download"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_gravity="center"
-                            android:background="@drawable/download"
-                            />
-
-                        <TextView
-                            android:id="@+id/download_count"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="2dp"
-                            android:alpha="0.7"
-                            android:textSize="10sp" />
-
-                    </LinearLayout>
 
                 </LinearLayout>
 

@@ -15,5 +15,11 @@
     <color name="whitecolor">#FDFCFD</color>
     <color name="lightcolor">#d3d3d3</color>
     <color name="bg">#6B5B95</color>
+    <color name="chat_selection_bg_color">#6B6B5B95</color>
     <color name="bg_light">#8e81b1</color>
+    <color name="grey">#A9A9A9</color>
+    <color name="light_blue">#03A9F4</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="text_gray">#757575</color>
+    <color name="click_efect">#C5C0C0</color>
 </resources>

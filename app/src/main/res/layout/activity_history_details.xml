@@ -79,7 +79,7 @@
                         android:textColor="#000"
                         android:id="@+id/full_location"
                         android:padding="@dimen/album_dp_10"
-                        android:text="A-6/79, Chatterjee Road"
+                        android:text=""
                         android:fontFamily="@font/roboto"
                         >
 

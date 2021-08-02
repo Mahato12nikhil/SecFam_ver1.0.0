@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/album_dp_40"
+        android:background="@color/bg"
+        android:id="@+id/h1">
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="5dp"
+        android:layout_gravity="center_vertical"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_baseline_keyboard_arrow_left_24"/>
+    </LinearLayout>
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    app:cardCornerRadius="10dp"
+    android:layout_marginTop="9dp"
+    android:background="@color/white">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/frame_1"
+                android:layout_below="@id/details_link"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:textColorLink="#629AF7"
+                        android:id="@+id/postTextxx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="#000"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:visibility="gone" />
+
+                    <include
+                        android:id="@+id/richPrev"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        layout="@layout/link_layout">
+
+                    </include>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dots_holder"
+                        android:orientation="horizontal"
+                        android:layout_gravity="bottom"
+                        android:gravity="center|bottom"
+                        >
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+
+            <View
+
+                android:layout_width="match_parent"
+                android:background="#E4E2E2"
+                android:id="@+id/view_1"
+
+                android:layout_below="@id/frame_1"
+                android:layout_height="1dp"
+                android:layout_margin="0dp">
+
+            </View>
+            <View
+
+                android:layout_width="match_parent"
+                android:background="#E4E2E2"
+                android:id="@+id/view_2"
+                android:layout_below="@id/description"
+                android:layout_height="0dp">
+
+            </View>
+
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_profileText"
+                android:fontFamily="@font/roboto"
+                android:padding="4dp"
+                android:textSize="12sp">
+
+            </TextView>
+
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_profileText"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="#ffff"
+                android:src="@drawable/man_placeholder"
+                android:layout_margin="6dp"
+
+                />
+
+
+
+            <TextView
+
+                android:fontFamily="@font/roboto"
+                android:id="@+id/usernameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_2"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_toRightOf="@id/image_profileText"
+                android:text="......."
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/usernameText"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/image_profileText"
+
+                android:fontFamily="@font/roboto"
+                android:text="........" />
+
+            <TextView
+                android:id="@+id/details_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_profileText"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:layout_marginLeft="4dp"
+                android:text=".........."
+                android:textSize="16dp">
+
+            </TextView>
+
+
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_below="@id/view_1"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+                <LinearLayout
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/link_like_click"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:orientation="vertical">
+
+
+
+                        <FrameLayout
+                            android:layout_width="@dimen/album_dp_20"
+                            android:layout_height="@dimen/album_dp_20"
+                            android:layout_marginTop="2dp">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:id="@+id/likeIcon"
+                                android:src="@drawable/heart" />
+                            <ProgressBar
+                                android:id="@+id/like_progress"
+                                android:layout_width="@dimen/album_dp_20"
+                                android:layout_height="@dimen/album_dp_20"
+                                android:visibility="gone"/>
+                        </FrameLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:id="@+id/like_countXT"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="2dp"
+                                android:textColor="#000"
+                                android:textSize="10dp"
+                                android:alpha="0.5"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:id="@+id/commentLink"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/comment" />
+
+                        <TextView
+                            android:id="@+id/comment_countXT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="2dp"
+                            android:alpha="0.5"
+                            android:textColor="#000"
+                            android:textSize="10dp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:clickable="true"
+                android:id="@+id/moreLink"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/more"
+                android:background="@drawable/ripple"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:alpha="0.8"/>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+</com.google.android.material.card.MaterialCardView>
+    <TextView
+        android:id="@+id/post_not_exist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/post_not_exist_msg"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:visibility="gone"/>
+</LinearLayout>

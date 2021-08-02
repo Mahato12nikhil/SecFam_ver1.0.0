@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <com.google.android.material.card.MaterialCardView
     android:id="@+id/PlayerContentView"
     android:layout_height="match_parent"
@@ -13,16 +11,13 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_gravity="right|top"
             android:src="@drawable/live"
             android:visibility="visible">
-
         </ImageView>
-
 
         <com.bambuser.broadcaster.SurfaceViewWithAutoAR
             android:id="@+id/VideoSurfaceView"
@@ -49,14 +44,11 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:textSize="20sp"
                 android:textColor="@color/bg"/>
-
-
             <LinearLayout
                 android:visibility="gone"
                 android:id="@+id/showProg"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent">
-
                 <TextView
                     android:id="@+id/currentTime"
                     android:layout_height="wrap_content"
@@ -66,7 +58,6 @@
                     android:text="50:58"
                     android:layout_marginTop="8dp">
                 </TextView>
-
                 <SeekBar
                     android:visibility="gone"
                     android:id="@+id/seekBar2x"
@@ -83,7 +74,6 @@
                     android:progressTint="@color/bg"
                     android:thumbTint="@color/bg"
                     android:secondaryProgress="56"/>
-
                 <TextView
                     android:id="@+id/totalTime"
                     android:layout_height="wrap_content"
@@ -92,20 +82,13 @@
                     android:text="50:58"
                     android:layout_marginEnd="5dp"
                     android:layout_marginTop="8dp"> </TextView>
-
             </LinearLayout>
-
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="horizontal">
-
-
-
-
-
             <ImageView
                 android:visibility="gone"
                 android:layout_width="60dp"
@@ -121,13 +104,7 @@
                 android:alpha="0.7"
                 android:layout_marginStart="40dp"
                 android:layout_marginEnd="40dp">
-
             </ImageView>
-
-
-
         </RelativeLayout>
-
-
     </FrameLayout>
 </com.google.android.material.card.MaterialCardView>

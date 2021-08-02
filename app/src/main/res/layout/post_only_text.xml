@@ -103,7 +103,7 @@
                 android:layout_height="40dp"
                 app:civ_border_width="1dp"
                 app:civ_border_color="#ffff"
-                android:src="@drawable/sample"
+                android:src="@drawable/man_placeholder"
                 android:layout_margin="6dp"
 
                 />
@@ -119,7 +119,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_toRightOf="@id/image_profileTextJKSS"
-                android:text="Nikhil Mahato"
+                android:text=".........."
                 android:textColor="#000"
                 android:background="@drawable/ripple_2"
                 android:clickable="true"
@@ -135,7 +135,7 @@
                 android:layout_toRightOf="@id/image_profileTextJKSS"
 
                 android:fontFamily="@font/roboto"
-                android:text="4 hrs ago" />
+                android:text="....." />
 
             <LinearLayout
 
@@ -163,35 +163,25 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:id="@+id/LikeTextSS"
-                            android:src="@drawable/heart"
-                            android:layout_marginTop="2dp"
-
-                            >
-
-                        </ImageView>
+                        <FrameLayout
+                            android:layout_width="@dimen/album_dp_20"
+                            android:layout_height="@dimen/album_dp_20"
+                            android:layout_marginTop="2dp">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:id="@+id/LikeTextSS"
+                                android:src="@drawable/heart" />
+                            <ProgressBar
+                                android:id="@+id/like_progress"
+                                android:layout_width="@dimen/album_dp_20"
+                                android:layout_height="@dimen/album_dp_20"
+                                android:visibility="gone"/>
+                        </FrameLayout>
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/youchkdtxt"
-
-                                android:visibility="gone"
-                                android:textColor="@color/black"
-                                android:layout_marginTop="2dp"
-                                android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
-
-                                android:text="you and "
-                                android:layout_gravity="center"
-                                android:textSize="10dp"
-                                android:alpha="0.7"/>
                         <TextView
                             android:textColor="@color/black"
                             android:id="@+id/like_countXTJKSS"
@@ -203,8 +193,12 @@
                             android:alpha="0.7"/>
                         </LinearLayout>
                     </LinearLayout>
-
                     <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:id="@+id/commentText"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:layout_width="0dp"
@@ -212,10 +206,8 @@
                         android:background="?android:attr/selectableItemBackground"
                         android:clickable="true"
                         android:focusable="true"
-                        android:id="@+id/comment_holderJK"
                         android:layout_height="wrap_content">
                         <ImageView
-                            android:id="@+id/commentTextJKSS"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_marginTop="2dp"

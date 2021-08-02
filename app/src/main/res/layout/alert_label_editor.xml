@@ -83,23 +83,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="cancel"
+            android:text="@string/cancel"
             android:textColor="@color/bg"
-            android:textSize="15dp">
+            android:textSize="15sp">
 
         </TextView>
         <TextView
-
             android:layout_below="@id/reportOwn"
             android:id="@+id/reportButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:text="Report"
+            android:text="@string/report"
             android:layout_alignParentEnd="true"
             android:textColor="@color/bg"
-            android:textSize="15dp">
+            android:textSize="15sp"
+            android:background="?attr/selectableItemBackground">
 
         </TextView>
     </RelativeLayout>

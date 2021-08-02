@@ -13,13 +13,15 @@
 
     <include layout="@layout/messagetabtop"></include>
 
+
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/message_swipe_layout"
         android:layout_width="match_parent"
-        android:layout_marginTop="4dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/belowET"
-        android:layout_below="@id/rhj">
+        android:layout_below="@id/rhj"
+        android:layout_marginTop="4dp">
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/messages_list"
             android:layout_width="match_parent"
@@ -31,9 +33,8 @@
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-
-
     <include layout="@layout/messagebottom_et"></include>
+
 </RelativeLayout>
 
 

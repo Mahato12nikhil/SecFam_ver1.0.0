@@ -40,7 +40,8 @@
             android:paddingStart="12dp"
             android:hint="Enter Message..."
             android:layout_centerVertical="true"
-            android:textCursorDrawable="@null" />
+            android:textCursorDrawable="@null"
+            android:maxLines="6"/>
 
     </RelativeLayout>
     <ImageView

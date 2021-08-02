@@ -1,67 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="8dp"
-    android:layout_alignParentEnd="true"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout_RT"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
     android:gravity="end"
-    android:orientation="vertical"
-    android:layout_marginBottom="5dp"
-    android:layout_width="match_parent">
+    android:orientation="vertical">
 
-    <RelativeLayout
-        android:id="@+id/Message1"
-        android:padding="6dp"
-        android:background="@drawable/backgroundtheme"
-        android:orientation="horizontal"
+
+    <TextView
+        android:id="@+id/tv_day"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:background="@drawable/chat_day_bg"
+        android:padding="8dp"
+        android:text="TODAY"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/chat_text"
+    <LinearLayout
+        android:id="@+id/checkedItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/album_dp_2"
+        android:paddingTop="@dimen/album_dp_2">
+        <LinearLayout
+            android:id="@+id/ll_ripple"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_margin="3dp"
-            android:paddingLeft="5dp"
-            android:maxWidth="200dp"
-            android:fontFamily="@font/roboto"
-            android:text="Hello friends"
-            android:textColor="@color/whitecolor"
-            android:textSize="16dp"/>
-
-        <TextView
-
-            android:id="@+id/Time"
+            android:background="@drawable/backgroundtheme">
+        <RelativeLayout
+            android:id="@+id/Message1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/chat_text"
-            android:text="10:45pm"
-            android:textSize="8dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="3dp"
-            android:fontFamily="@font/roboto_light"
-            android:layout_toRightOf="@+id/chat_text"
-            android:textColor="@color/whitecolor"
-            />
-        <ImageView
-            android:layout_width="10dp"
-            android:layout_height="10dp"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            android:background="?attr/selectableItemBackground">
 
-            android:src="@drawable/sent_tick"
-            android:id="@+id/seen"
-            android:layout_alignBaseline="@id/chat_text"
-            android:layout_alignParentBottom="true"
-            android:layout_toRightOf="@+id/Time"
+            <TextView
+                android:id="@+id/chat_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="3dp"
+                android:fontFamily="@font/roboto"
+                android:maxWidth="200dp"
+                android:paddingLeft="5dp"
+                android:text="Hello friends"
+                android:textColor="@color/whitecolor"
+                android:textSize="16sp" />
+
+            <TextView
+
+                android:id="@+id/Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/chat_text"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/chat_text"
+                android:fontFamily="@font/roboto"
+                android:text="10:45pm"
+                android:textColor="@color/whitecolor"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <ImageView
+                android:id="@+id/seen"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignBaseline="@id/chat_text"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/Time"
+                android:src="@drawable/ic_pending_message"
+                android:textColor="#fff" />
 
 
-            android:layout_marginLeft="5dp"
-            android:textColor="#fff"></ImageView>
-
-
-    </RelativeLayout>
-
+        </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

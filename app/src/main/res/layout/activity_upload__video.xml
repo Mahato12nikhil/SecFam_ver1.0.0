@@ -20,29 +20,40 @@
         android:layout_height="wrap_content"
         android:id="@+id/pf_holder"
         android:layout_below="@id/toolbar">
-
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/frame"
+            android:layout_margin="5dp">
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:id="@+id/upload_pf"
+            android:id="@+id/profile_image"
             app:civ_border_color="@color/white"
             app:civ_border_width="1dp"
-            android:src="@drawable/sample"
-            android:layout_margin="5dp"
-            >
-
-        </de.hdodenhof.circleimageview.CircleImageView>
+            android:src="@drawable/man_placeholder"
+            />
+            <ImageView
+                android:id="@+id/status"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_gravity="end|bottom"
+                android:background="@drawable/circle_white"
+                android:padding="@dimen/album_dp_1"
+                android:src="@drawable/onlinecircle"
+                android:visibility="visible" />
+        </FrameLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/upload_pf"
+            android:layout_toRightOf="@id/frame"
             android:textStyle="bold"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="2dp"
             android:gravity="center"
+            android:id="@+id/username"
             android:layout_centerHorizontal="true"
-            android:text="Tapas Mondal"
             android:textColor="@color/black"
             android:fontFamily="@font/roboto">
 
@@ -55,8 +66,8 @@
         android:layout_width="match_parent"
         android:id="@+id/editText"
         android:layout_margin="2dp"
-        android:hint="Write a caption"
-        android:textColorHint="@color/black"
+        android:hint="@string/write_a_caption"
+        android:textColorHint="@color/grey"
         android:padding="5dp"
         android:textSize="14sp"
         android:fontFamily="@font/roboto"

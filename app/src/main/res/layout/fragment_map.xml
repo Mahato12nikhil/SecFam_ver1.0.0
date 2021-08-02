@@ -7,17 +7,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 <FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="match_parent"/>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
@@ -35,7 +32,6 @@
         android:layout_gravity="bottom"
         android:background="@color/white">
 
-
         <LinearLayout
             android:id="@+id/uy"
             android:background="@android:color/white"
@@ -49,8 +45,6 @@
                 android:orientation="horizontal"
                 android:layout_margin="5dp">
 
-
-
                 <ImageView
                     android:layout_width="18dp"
                     android:layout_height="18dp"
@@ -58,23 +52,18 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:src="@drawable/location">
-
                 </ImageView>
-
-
 
                 <TextView
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:id="@+id/time_kl"
-                    android:textSize="15dp"
-                    android:textStyle=""
+                    android:id="@+id/tvAddress"
+                    android:textSize="15sp"
                     android:ems="20"
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/roboto"
-                    android:text="5/72, Kalyani, Nadia, West Bengal, PIN: 741235, India, bjbfjkbfjkdbkjbjjkbkbjkbkjbjbjbkbkjbk"/>
+                    android:fontFamily="@font/roboto"/>
 
 
 
@@ -122,7 +111,7 @@
                 <LinearLayout
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:id="@+id/Routing"
+                    android:id="@+id/route_on_googleMap"
                     android:layout_gravity="bottom"
                     android:background="@drawable/map_button_bg"
                     android:enabled="true"
@@ -139,17 +128,18 @@
                         android:layout_gravity="center">
 
                     </ImageView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="15sp"
-                        android:text="Route"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
                         android:layout_marginTop="5dp"
-                        android:textColor="@color/white"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
                         android:fontFamily="@font/roboto"
-                        android:layout_gravity="center">
+                        android:text="Route"
+                        android:textColor="@color/white"
+                        android:textSize="15sp">
 
                     </TextView>
 
@@ -159,7 +149,7 @@
                 <LinearLayout
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:id="@+id/startloc"
+                    android:id="@+id/centerView"
                     android:layout_gravity="bottom"
                     android:orientation="horizontal"
                     android:background="@drawable/map_button_bg"

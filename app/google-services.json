@@ -1,71 +1,42 @@
 {
   "project_info": {
-    "project_number": "986688208058",
-    "firebase_url": "https://secfam-87ea2.firebaseio.com",
-    "project_id": "secfam-87ea2",
-    "storage_bucket": "secfam-87ea2.appspot.com"
+    "project_number": "1087636950933",
+    "firebase_url": "https://secfam-2be37-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "secfam-2be37",
+    "storage_bucket": "secfam-2be37.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:986688208058:android:c328cd2e87ce25b9",
+        "mobilesdk_app_id": "1:1087636950933:android:64d6bb368834568c61709c",
         "android_client_info": {
-          "package_name": "com.project.nikhil.secfam"
+          "package_name": "com.project.nikhil.secfamfinal1"
         }
       },
       "oauth_client": [
         {
-          "client_id": "986688208058-etvh67crollam5pghd8fv5gefuvuiorq.apps.googleusercontent.com",
+          "client_id": "1087636950933-8ottn3tl2an9jcvav8j8ri1ctvod94qv.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.project.nikhil.secfam",
-            "certificate_hash": "6b94cafcca617235db6099e87bd442532b3f974f"
+            "package_name": "com.project.nikhil.secfamfinal1",
+            "certificate_hash": "abfd6983ed2cc01a3251237d16a89fac01c00ca6"
           }
         },
         {
-          "client_id": "986688208058-5a2rt4vu563vegu69g9pgob8rviorovs.apps.googleusercontent.com",
+          "client_id": "1087636950933-1mbdc1bu4q0q1r7n6vbirugvel52vme7.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCMnYEo-NVagGbY_J9GJd6-4OvpfoIwmfQ"
+          "current_key": "AIzaSyALLleXKg_5BvP7AS0iw5UwE0B25288Wbw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "986688208058-5a2rt4vu563vegu69g9pgob8rviorovs.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:986688208058:android:2f5ac382e5ebc1fa801683",
-        "android_client_info": {
-          "package_name": "com.project.nikhil.secfamfinal"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "986688208058-5a2rt4vu563vegu69g9pgob8rviorovs.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCMnYEo-NVagGbY_J9GJd6-4OvpfoIwmfQ"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "986688208058-5a2rt4vu563vegu69g9pgob8rviorovs.apps.googleusercontent.com",
+              "client_id": "1087636950933-1mbdc1bu4q0q1r7n6vbirugvel52vme7.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

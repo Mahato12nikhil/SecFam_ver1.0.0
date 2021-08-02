@@ -115,12 +115,7 @@
                         android:layout_margin="5dp"
                         app:boxStrokeColor="@color/bg"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:orientation="vertical"
-
-                        >
-
-
-
+                        android:orientation="vertical">
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -129,10 +124,8 @@
                             android:fontFamily="@font/roboto"
                             android:textSize="15sp"
                             android:inputType="phone"
-                            android:maxLength="13"
-                            android:enabled="true"
-
-                            >
+                            android:maxLength="10"
+                            android:enabled="true">
 
                         </com.google.android.material.textfield.TextInputEditText>
                     </com.google.android.material.textfield.TextInputLayout>
@@ -185,7 +178,45 @@
 
                         </com.google.android.material.textfield.TextInputEditText>
                     </com.google.android.material.textfield.TextInputLayout>-->
+                    <FrameLayout
+                        android:id="@+id/regenerateOTPLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:visibility="gone">
 
+                        <TextView
+                            android:id="@+id/tvChangeMobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/change_details"
+                            android:textColor="@color/light_blue"
+                            android:background="?android:attr/selectableItemBackground"/>
+
+                        <TextView
+                            android:id="@+id/tvTimer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:padding="5dp"
+                            android:textColor="@color/light_blue" />
+
+                        <TextView
+                            android:id="@+id/reGenerateOTP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:padding="5dp"
+                            android:text="@string/regenerate_otp"
+                            android:textColor="@color/light_blue"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:visibility="gone"
+                            android:background="?android:attr/selectableItemBackground"/>
+                    </FrameLayout>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -206,7 +237,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/login_bt_bg"
                     android:id="@+id/SignUpNextButton"
-                    android:text="Next"
+                    android:text="@string/register"
                     android:fontFamily="@font/roboto"
                     android:textAllCaps="false"
                     android:textStyle="bold"

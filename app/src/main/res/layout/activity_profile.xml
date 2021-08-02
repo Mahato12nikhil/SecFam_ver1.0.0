@@ -106,7 +106,7 @@
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
                             android:layout_toRightOf="@+id/profileName"
-                            >
+                            android:visibility="gone">
                         </ImageView>
 
 
@@ -115,7 +115,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/profileName"
-                            android:text="Rakul Preet"
                             android:textColor="#fff"
                             android:fontFamily="@font/roboto"
                             android:textSize="22dp"
@@ -253,10 +252,11 @@
                 </ImageView>
 
                 <TextView
+                    android:id="@+id/tv_user_location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/city_location"
-                    android:text=" Kolkata "
+                    android:text="@string/no_location_is_set"
                     android:textColor="#ffff"
                     android:textStyle="bold"
                     android:layout_alignParentBottom="true"
